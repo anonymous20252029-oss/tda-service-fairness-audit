@@ -21,20 +21,28 @@ import os
 import streamlit.components.v1 as components
 import plotly.graph_objects as go
 
-# Cấu hình trang hiển thị
 st.set_page_config(
     layout="wide",
     page_title="TDA Algorithmic Governance Prototype",
     page_icon="⚖️"
 )
 
-# Đường dẫn thư mục dữ liệu
+# --- TỰ ĐỘNG PHÁT HIỆN ĐƯỜNG DẪN DÙ ĐỨNG Ở ROOT HAY THƯ MỤC CON ---
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
+
+# Kiểm tra nếu thư mục tables nằm cùng cấp với app.py (như trên GitHub hiện tại)
+if os.path.exists(os.path.join(CURRENT_DIR, "tables")):
+    BASE_DIR = CURRENT_DIR
+# Nếu app.py nằm trong thư mục con prototype_app/
+elif os.path.exists(os.path.join(CURRENT_DIR, "..", "tables")):
+    BASE_DIR = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
+else:
+    BASE_DIR = CURRENT_DIR
+
 TABLES_JSON_PATH = os.path.join(BASE_DIR, "tables", "benchmark_fairness_multimodel_cv.json")
 MAPPER_DIR = os.path.join(BASE_DIR, "mapper_graphs")
 
-# Tải dữ liệu kết quả kiểm toán 5-Fold Cross Validation
+# Tải dữ liệu kiểm toán
 @st.cache_data
 def load_audit_data():
     if os.path.exists(TABLES_JSON_PATH):

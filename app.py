@@ -1,14 +1,14 @@
 # 2. MÃ NGUỒN CẬP NHẬT HOÀN CHỈNH: `prototype_app/app.py`
 
-Mã nguồn này được thiết kế lại nhằm:
-- **Tích hợp 4 Tabs chuyên biệt** thể hiện rõ ràng 4 Đóng góp của bài báo.
-- **Có bảng điều khiển tương tác Plotly** trực quan hóa Nghịch lý Bình đẳng Ảo.
-- **Tích hợp khung giả lập (Simulator) cho 2 kịch bản thực tế:**
-  1. Thẩm định viên Ngân hàng (Loan Underwriting Override).
-  2. Bác sĩ Phân luồng Cấp cứu (Emergency Triage Override).
-- **Nhúng trực tiếp đồ thị KeplerMapper HTML** ngay trong ứng dụng.
+#Mã nguồn này được thiết kế lại nhằm:
+#- **Tích hợp 4 Tabs chuyên biệt** thể hiện rõ ràng 4 Đóng góp của bài báo.
+#- **Có bảng điều khiển tương tác Plotly** trực quan hóa Nghịch lý Bình đẳng Ảo.
+#- **Tích hợp khung giả lập (Simulator) cho 2 kịch bản thực tế:**
+#  1. Thẩm định viên Ngân hàng (Loan Underwriting Override).
+#  2. Bác sĩ Phân luồng Cấp cứu (Emergency Triage Override).
+#- **Nhúng trực tiếp đồ thị KeplerMapper HTML** ngay trong ứng dụng.
 
-```python
+#```python
 # ==============================================================================
 # STREAMLIT INTERACTIVE GOVERNANCE PROTOTYPE: TOPOLOGICAL SERVICE AI AUDITING
 # Production Version: Supporting Empirical Contributions & Operational Redress
